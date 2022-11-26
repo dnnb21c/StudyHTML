@@ -2,28 +2,65 @@
 <html>
 <head>
 	<title>WEB1 - HTML</title>
+	<style></style>
 	<meta charset="utf-8">
+	<script src="Main.js"></script>
 </head>
 <body>
 	Hello World!
-	<table class="editabletable" border="1">
-		<tr>
-		  <td><div contenteditable>a</div></td>
-		  <td><div contenteditable>b</div></td>
-		  <td><div contenteditable>c</div></td>
-		</tr>
-		<tr>
-		  <td><div contenteditable>d</div></td>
-		  <td><div contenteditable>e</div></td>
-		  <td><div contenteditable>f</div></td>
-		</tr>
-		<tr>
-		  <td><div contenteditable>g</div></td>
-		  <td><div contenteditable>h</div></td>
-		  <td><div contenteditable>i</div></td>
-		</tr>
-	</table>
 
 	
+		<script>
+		var i,j;
+		var widFirstCol, widName, widA, widP, widSC, widRK, widZo;
+			widFirstCol=26;
+			widName=80;
+			widA=17;
+			widP=17;
+			widSC=26;
+			widRK=26;
+			widZo=widName+widA+widP+widSC+widRK;
+
+		// document.write("<table>");
+			 document.write("<table class=editabletable border=1 width:"+widFirstCol+widZo*6+">");
+
+		document.write("<tr>");
+			document.write("<td width:"+widFirstCol+"><div> </div></td>");
+			document.write("<td colspan=5 width:"+widZo+"><div>A조</div></td>");
+			document.write("<td colspan=5 width:"+widZo+"><div>B조</div></td>");
+			document.write("<td colspan=5 width:"+widZo+"><div>C조</div></td>");
+			document.write("<td colspan=5 width:"+widZo+"><div>D조</div></td>");
+			document.write("<td colspan=5 width:"+widZo+"><div>E조</div></td>");
+			document.write("<td colspan=5 width:"+widZo+"><div>F조</div></td>");
+		document.write("</tr>");
+
+		document.write("<tr>");
+			document.write("<td width="+widFirstCol+"><div> </div></td>");
+			document.write("<td colspan=5 width:"+widZo+"><div>(A)</div></td>");
+			document.write("<td colspan=5 width:"+widZo+"><div>(B)</div></td>");
+			document.write("<td colspan=5 width:"+widZo+"><div>(C)</div></td>");
+			document.write("<td colspan=5 width:"+widZo+"><div>(D)</div></td>");
+			document.write("<td colspan=5 width:"+widZo+"><div>(E)</div></td>");
+			document.write("<td colspan=5 width:"+widZo+"><div>(F)</div></td>");
+		document.write("</tr>");
+
+		for(i=0; i<50; i++){
+		document.write("<tr>");
+			document.write("<td width="+widFirstCol+"<div>"+(i+1)+"</div></td>");
+
+			for(j=0; j<6; j++){
+			document.write("<td width="+widName+"><div contenteditable>"+"박순규님"+"</div></td>");
+			document.write("<td width="+widA+"><div> A </div></td>");
+			document.write("<td width="+widP+"><div> P </div></td>");
+			document.write("<td width="+widSC+"><div> SC </div></td>");
+			document.write("<td width="+widRK+"><div> RK </div></td>");
+			}
+		document.write("</tr>");
+		}
+		 document.write("</table>");
+		</script>
+
+
+
 </body>
 </html>
